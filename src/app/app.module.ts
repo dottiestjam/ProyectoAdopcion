@@ -11,6 +11,11 @@ import { RescatePage } from '../pages/rescate/rescate';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { SQLite } from '@ionic-native/sqlite';
+import { Toast } from '@ionic-native/toast';
+import { BaseDatosProvider } from '../providers/base-datos/base-datos';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    SQLite,
+    Toast,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BaseDatosProvider
   ]
 })
 export class AppModule {}
