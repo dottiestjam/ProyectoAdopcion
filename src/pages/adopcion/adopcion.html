@@ -10,12 +10,42 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>adopcion</ion-title>
+    <ion-title>Adopciones</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <form [formGroup]="adopcion" (ngSubmit)="enviardatos()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Descripcion</ion-label>
+        <ion-input type="text" formControlName="descripcion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Edad</ion-label>
+        <ion-input type="number" formControlName="edad"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label fixed>Raza</ion-label>
+        <ion-input type="text" formControlName="raza"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label fixed>Sexo</ion-label>
+        <ion-select formControlName="sexo">
+          <ion-option value="1">
+            Hembra
+          </ion-option>
+          <ion-option value="2">
+            Macho
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <button ion-button block>Agregar</button>
+    </ion-list>
+  </form>
 </ion-content>

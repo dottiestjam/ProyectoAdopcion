@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+import { AdopcionPage } from '../../pages/adopcion/adopcion';
 
 /*
   Generated class for the BaseDatosProvider provider.
@@ -26,7 +27,7 @@ export class BaseDatosProvider {
       (data)=>{
         console.log("BASE DE DATOS CREADA");
         this.db=data;
-        this.creatabla()
+        this.creatablaAdopcion()
         .then(
           (datal)=>{
             console.log("TABLA CREADA");
@@ -41,14 +42,14 @@ export class BaseDatosProvider {
     })
   }
 
-  creatabla(){
-    let sql = "CREATE TABLE IF NOT EXISTS alumnos(id INTEGER PRIMARY KEY AUTOINCREMENT,nombre TEXT, edad INTEGER, carrera TEXT, cuatrimestre INTEGER)";
+  creatablaAdopcion(){
+    let sql = "CREATE TABLE IF NOT EXISTS adopciones(id INTEGER PRIMARY KEY AUTOINCREMENT,descripcion TEXT, edad INTEGER,raza TEXT,sexo INTEGER)";
     return this.db.executeSql(sql,[]);
   }
 
-  insertdatos(alumnos:any){
-    let sql="INSERT INTO alumnos(nombre,edad,carrera,cuatrimestre) VALUES (?,?,?,?)";
-    return this.db.executeSql(sql,[alumnos.nombre,alumnos.edad,alumnos.carrera,alumnos.cuatrimestre])
+  insertarAdopcion(adopciones:any){
+    let sql="INSERT INTO adopciones(descripcion,edad,raza,sexo) VALUES (?,?,?,?)";
+    return this.db.executeSql(sql,[adopciones.descripcion,adopciones.edad,adopciones.raza,adopciones.sexo])
   }
 
   recuperadatos(){
