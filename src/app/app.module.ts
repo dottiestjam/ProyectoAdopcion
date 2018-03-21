@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AdopcionPage } from '../pages/adopcion/adopcion';
 import { RescatePage } from '../pages/rescate/rescate';
+import { AdopcionDetallePage } from '../pages/adopcion-detalle/adopcion-detalle';
+import { AdopcionFormularioPage } from '../pages/adopcion-formulario/adopcion-formulario'; 
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +25,9 @@ import { BaseDatosProvider } from '../providers/base-datos/base-datos';
     HomePage,
     ListPage,
     AdopcionPage,
-    RescatePage
+    RescatePage,
+    AdopcionDetallePage,
+    AdopcionFormularioPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,9 @@ import { BaseDatosProvider } from '../providers/base-datos/base-datos';
     HomePage,
     ListPage,
     AdopcionPage,
-    RescatePage
+    RescatePage,
+    AdopcionDetallePage,
+    AdopcionFormularioPage
   ],
   providers: [
     StatusBar,
