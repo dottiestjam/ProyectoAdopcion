@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
-import { AdopcionFormularioPage } from '../../pages/adopcion-formulario/adopcion-formulario'; 
+import { AdopcionFormularioPage } from '../../pages/adopcion-formulario/adopcion-formulario';
+import { AdopcionDetallePage } from '../../pages/adopcion-detalle/adopcion-detalle';
+import { BaseDatosProvider } from '../../providers/base-datos/base-datos';
 
 
 /**
@@ -18,10 +20,25 @@ import { AdopcionFormularioPage } from '../../pages/adopcion-formulario/adopcion
 })
 export class AdopcionPage {
 
-
+  adopciones;
   constructor(public navCtrl: NavController, public navParams: NavParams,
+    private basedatosProvider:BaseDatosProvider,
     public modalCtrl:ModalController
   ) {
+    
+  }
+
+  ionViewWillEnter(){
+    this.cargadatos();
+  }
+
+  cargadatos(){
+    this.basedatosProvider.recuperadopciones()
+    .then(
+      lista => {
+        this.adopciones = lista
+      }
+    )
   }
 
   ionViewDidLoad() {
@@ -30,6 +47,11 @@ export class AdopcionPage {
 
   formulariomodal(){
     let modal = this.modalCtrl.create(AdopcionFormularioPage,{});
+    modal.present();
+  }
+
+  detallemodal(adopcion){
+    let modal = this.modalCtrl.create(AdopcionDetallePage,{datos:adopcion});
     modal.present();
   }
 

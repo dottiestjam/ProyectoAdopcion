@@ -7,12 +7,20 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>adopcionDetalle</ion-title>
+    <ion-buttons>
+      <button (click)="cancel()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Detalle</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <h2>{{adopcion.raza}}</h2>
+  <h2>{{adopcion.sexo}}</h2>
+  <h2>{{adopcion.edad}}</h2>
+  <p>{{adopcion.descripcion}}</p>
 </ion-content>

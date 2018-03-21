@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, ViewController} from 'ionic-angular';
 import { BaseDatosProvider } from '../../providers/base-datos/base-datos';
 import{FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { ModalController } from 'ionic-angular';
@@ -23,7 +23,8 @@ export class AdopcionFormularioPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private basedatosProvider:BaseDatosProvider,
     private formBuilder:FormBuilder,
-    private toastController:ToastController
+    private toastController:ToastController,
+    public viewCtrl:ViewController
   ) {
     this.adopcion = this.formBuilder.group({
       descripcion: ["",Validators.required],
@@ -54,6 +55,10 @@ export class AdopcionFormularioPage {
       position: 'top'
     });
     toastController.present();
+  }
+
+  cancel(){
+    this.viewCtrl.dismiss();
   }
 
 }

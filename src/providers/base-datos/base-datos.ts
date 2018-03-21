@@ -52,21 +52,22 @@ export class BaseDatosProvider {
     return this.db.executeSql(sql,[adopciones.descripcion,adopciones.edad,adopciones.raza,adopciones.sexo])
   }
 
-  recuperadatos(){
-    let sql = "SELECT * FROM alumnos";
+  recuperadopciones(){
+    let sql = "SELECT * FROM adopciones";
     return this.db.executeSql(sql,[])
     .then(
       Response=>{
-        let alumnos = [];
+        let adopciones = [];
         for (let index = 0; index < Response.rows.length; index++) {
-          alumnos.push(Response.rows.item(index));
+          adopciones.push(Response.rows.item(index));
         }
-        return Promise.resolve(alumnos);
+        return Promise.resolve(adopciones);
       }
     )
     .catch(
       error => Promise.reject(error)
     )
-  } 
+  }
+
 
 }
