@@ -17,6 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SQLite } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
 import { BaseDatosProvider } from '../providers/base-datos/base-datos';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 
 
 @NgModule({
@@ -48,6 +50,8 @@ import { BaseDatosProvider } from '../providers/base-datos/base-datos';
     SplashScreen,
     SQLite,
     Toast,
+    Camera,
+    Base64ToGallery,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BaseDatosProvider
   ]

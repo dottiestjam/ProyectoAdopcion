@@ -28,10 +28,6 @@ export class AdopcionPage {
     
   }
 
-  ionViewWillEnter(){
-    this.cargadatos();
-  }
-
   cargadatos(){
     this.basedatosProvider.recuperadopciones()
     .then(
@@ -43,6 +39,7 @@ export class AdopcionPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AdopcionPage');
+    this.cargadatos();
   }
 
   formulariomodal(){
