@@ -31,11 +31,15 @@ export class AdopcionFormularioPage {
     private base64ToGallery: Base64ToGallery
   ) {
     this.adopcion = this.formBuilder.group({
+      nombre: ["",Validators.required],
       descripcion: ["",Validators.required],
       edad: [""],
       raza: ["",Validators.required],
       sexo:["",Validators.required],
-      foto:[""]
+      foto:[""],
+      contacto:["",Validators.required],
+      correo:[""],
+      telefono:["",Validators.required]
     })
   }
 

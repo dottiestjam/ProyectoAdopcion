@@ -21,7 +21,8 @@
 
 <ion-content padding>
   <h2>{{adopcion.raza}}</h2>
-  <h2>{{adopcion.sexo}}</h2>
+  <h2 *ngIf="adopcion.sexo==1">Hembra</h2>
+  <h2 *ngIf="adopcion.sexo==2">Macho</h2>
   <h2>{{adopcion.edad}}</h2>
   <p>{{adopcion.descripcion}}</p>
 </ion-content>
