@@ -43,13 +43,13 @@ export class BaseDatosProvider {
   }
 
   creatablaAdopcion(){
-    let sql = "CREATE TABLE IF NOT EXISTS adopciones(id INTEGER PRIMARY KEY AUTOINCREMENT,descripcion TEXT, edad INTEGER,raza TEXT,sexo INTEGER, img TEXT)";
+    let sql = "CREATE TABLE IF NOT EXISTS adopciones(id INTEGER PRIMARY KEY AUTOINCREMENT,nombre TEXT,descripcion TEXT, edad INTEGER,raza TEXT,sexo INTEGER, img TEXT,contacto TEXT,correo TEXT,telefono NUMBER)";
     return this.db.executeSql(sql,[]);
   }
 
   insertarAdopcion(adopciones:any){
-    let sql="INSERT INTO adopciones(descripcion,edad,raza,sexo,img) VALUES (?,?,?,?,?)";
-    return this.db.executeSql(sql,[adopciones.descripcion,adopciones.edad,adopciones.raza,adopciones.sexo,adopciones.foto])
+    let sql="INSERT INTO adopciones(nombre,descripcion,edad,raza,sexo,img,contacto,correo,telefono) VALUES (?,?,?,?,?,?,?,?,?)";
+    return this.db.executeSql(sql,[adopciones.nombre,adopciones.descripcion,adopciones.edad,adopciones.raza,adopciones.sexo,adopciones.foto,adopciones.contacto,adopciones.correo,adopciones.telefono])
   }
 
   recuperadopciones(){
