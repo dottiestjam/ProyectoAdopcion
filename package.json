@@ -24,6 +24,7 @@
     "@ionic-native/call-number": "^4.6.0",
     "@ionic-native/camera": "^4.6.0",
     "@ionic-native/core": "4.4.0",
+    "@ionic-native/email-composer": "^4.6.0",
     "@ionic-native/splash-screen": "4.4.0",
     "@ionic-native/sqlite": "^4.6.0",
     "@ionic-native/status-bar": "4.4.0",
@@ -34,6 +35,7 @@
     "cordova-base64-to-gallery": "^4.1.3",
     "cordova-plugin-camera": "^4.0.2",
     "cordova-plugin-device": "^2.0.1",
+    "cordova-plugin-email-composer": "^0.8.15",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-splashscreen": "^5.0.2",
@@ -62,7 +64,8 @@
       "cordova-plugin-x-toast": {},
       "cordova-plugin-camera": {},
       "cordova-base64-to-gallery": {},
-      "mx.ferreyra.callnumber": {}
+      "mx.ferreyra.callnumber": {},
+      "cordova-plugin-email-composer": {}
     },
     "platforms": [
       "android"

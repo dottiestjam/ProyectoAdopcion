@@ -20,6 +20,7 @@ import { BaseDatosProvider } from '../providers/base-datos/base-datos';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { CallNumber } from '@ionic-native/call-number';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { CallNumber } from '@ionic-native/call-number';
     Camera,
     Base64ToGallery,
     CallNumber,
+    EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BaseDatosProvider
   ]
