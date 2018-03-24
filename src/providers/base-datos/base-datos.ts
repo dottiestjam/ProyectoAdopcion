@@ -47,9 +47,9 @@ export class BaseDatosProvider {
     return this.db.executeSql(sql,[]);
   }
 
-  insertarAdopcion(adopciones:any,foto:string){
-    let sql="INSERT INTO adopciones(descripcion,edad,raza,sexo) VALUES (?,?,?,?,?)";
-    return this.db.executeSql(sql,[adopciones.descripcion,adopciones.edad,adopciones.raza,adopciones.sexo,foto])
+  insertarAdopcion(adopciones:any){
+    let sql="INSERT INTO adopciones(descripcion,edad,raza,sexo,img) VALUES (?,?,?,?,?)";
+    return this.db.executeSql(sql,[adopciones.descripcion,adopciones.edad,adopciones.raza,adopciones.sexo,adopciones.foto])
   }
 
   recuperadopciones(){

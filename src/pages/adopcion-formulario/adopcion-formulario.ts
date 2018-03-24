@@ -34,7 +34,8 @@ export class AdopcionFormularioPage {
       descripcion: ["",Validators.required],
       edad: [""],
       raza: ["",Validators.required],
-      sexo:["",Validators.required]
+      sexo:["",Validators.required],
+      foto:[""]
     })
   }
 
@@ -45,7 +46,7 @@ export class AdopcionFormularioPage {
 
 
   enviardatos(){
-    this.basedatosProvider.insertarAdopcion(this.adopcion.value,this.foto)
+    this.basedatosProvider.insertarAdopcion(this.adopcion.value)
     .then((data)=>{
       this.avisotoast("Registro insertado");
       console.log(data);
@@ -72,8 +73,7 @@ export class AdopcionFormularioPage {
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       sourceType: this.camera.PictureSourceType.CAMERA,
-      correctOrientation: true,
-      saveToPhotoAlbum: true
+      correctOrientation: true
     };
     this.camera.getPicture(option).then(
       (ImageData) =>{
