@@ -19,6 +19,7 @@ import { Toast } from '@ionic-native/toast';
 import { BaseDatosProvider } from '../providers/base-datos/base-datos';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+import { CallNumber } from '@ionic-native/call-number';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
     Toast,
     Camera,
     Base64ToGallery,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BaseDatosProvider
   ]

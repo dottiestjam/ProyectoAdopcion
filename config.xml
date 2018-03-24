@@ -87,4 +87,5 @@
     <plugin name="cordova-plugin-camera" spec="^4.0.2" />
     <plugin name="cordova-base64-to-gallery" spec="^4.1.3" />
     <engine name="android" spec="7.0.0" />
+    <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
 </widget>

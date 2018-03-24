@@ -29,7 +29,7 @@
   <h3>Descripcion: </h3><p>{{adopcion.descripcion}}</p>
   <h3>Contacto: </h3><p>{{adopcion.contacto}}</p>
   <h3>Telefono: </h3><p>{{adopcion.telefono}}</p>
-  <ion-icon name="call" (click)="llamada()"></ion-icon><p> Hacer llamada</p>
+  <ion-icon name="call" (click)="llamada(adopcion.telefono)"></ion-icon><p> Hacer llamada</p>
   <h3>Email: </h3><p>{{adopcion.email}}</p>
   <ion-icon name="mail" (click)="email()"></ion-icon><p> Mandar correo</p>
 </ion-content>
