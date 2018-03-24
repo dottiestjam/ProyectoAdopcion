@@ -7,10 +7,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Agregar Adopcion</ion-title>
-
-
-    <ion-buttons end>
+    <ion-title>Agregar Adopción</ion-title>
+  <ion-buttons end>
       <button ion-button icon-only (click)="cancel()">
           <ion-icon item-right name="ios-close-outline"></ion-icon>
       </button>
@@ -18,13 +16,15 @@
   </ion-navbar>
 
 </ion-header>
-
-
 <ion-content padding>
   <form [formGroup]="adopcion" (ngSubmit)="enviardatos()">
     <ion-list>
+        <ion-item>
+            <ion-label fixed>Nombre</ion-label>
+          <ion-input type="text" formControlName="nombre"></ion-input>
+        </ion-item>
       <ion-item>
-        <ion-label fixed>Descripcion</ion-label>
+          <ion-label fixed>Descripción</ion-label>
         <ion-input type="text" formControlName="descripcion"></ion-input>
       </ion-item>
       <ion-item>
@@ -48,7 +48,18 @@
           </ion-option>
         </ion-select>
       </ion-item>
-
+      <ion-item>
+          <ion-label fixed>Contacto</ion-label>
+          <ion-input type="text" formControlName="contacto"></ion-input>
+        </ion-item>
+      <ion-item>
+            <ion-label fixed>Telefono</ion-label>
+            <ion-input type="number" formControlName="telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label fixed>Correo</ion-label>
+          <ion-input type="text" formControlName="correo"></ion-input>
+      </ion-item>
       <ion-item hidden>
         <ion-input hidden type="text" formControlName="foto" [(ngModel)]="foto"></ion-input>
       </ion-item>
