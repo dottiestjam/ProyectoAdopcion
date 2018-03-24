@@ -17,10 +17,43 @@
 
 </ion-header>
 
-
 <ion-content padding>
+<<<<<<< HEAD
   <h1>Datos del animal</h1>
   <ion-img width="80" height="80" src="{{adopcion.img}}"></ion-img>
+=======
+  <div class="list card">
+    <div class="item item-avatar">
+      <img src="adopcion.img">
+      <h2>Nombre: {{adopcion.nombre}}</h2>
+    </div>
+    <div class="item item-body">
+      <img class="full-image" src="adopcion.img">
+      <p>
+          {{adopcion.descripcion}}
+      </p>
+      <p>
+          <ion-icon name="call" (click)="llamada()"></ion-icon><p> Hacer llamada</p>
+          <h3>Email: </h3><p>{{adopcion.email}}</p>
+          <ion-icon name="mail" (click)="email()"></ion-icon><p> Mandar correo</p>
+      </p>
+    </div>
+    <div class="item item-button-right">
+        Llamar a contacto
+        <button class="button button-positive" (click)="llamada()">
+          <i class="icon ion-ios-telephone"></i>
+        </button>
+      </div>
+      <div class="item item-button-right">
+          <button class="button button-positive" (click)="email()">
+              <i class="icon ion-ios-mail"></i>
+            </button>
+      </div>
+  </div>
+  
+  <!-- <h1>Datos del animal</h1>
+  <ion-img width="180" height="180" src="adopcion.img"></ion-img>
+>>>>>>> 1f40bba9bfb4e22f3c49da2e961d2c23be2201a3
   <h3>Nombre: </h3><p>{{adopcion.nombre}}</p>
   <h3>Raza: </h3><p>{{adopcion.raza}}</p>
   <h3 *ngIf="adopcion.sexo==1">Sexo: Hembra</h3>
@@ -30,6 +63,7 @@
   <h3>Contacto: </h3><p>{{adopcion.contacto}}</p>
   <!-- <h3>Telefono: </h3><p>{{adopcion.telefono}}</p>
   <ion-icon name="call" (click)="llamada(adopcion.telefono)"></ion-icon><p> Hacer llamada</p>
+<<<<<<< HEAD
   <h3>Email: </h3><p>{{adopcion.correo}}</p>
   <ion-icon name="mail" (click)="enviarEmail(adopcion.correo,adopcion.nombre)"></ion-icon><p> Mandar correo</p> -->
 
@@ -43,4 +77,8 @@
       <ion-icon name="mail"></ion-icon>
       Enviar correo
     </button>
+=======
+  <h3>Email: </h3><p>{{adopcion.email}}</p>
+  <ion-icon name="mail" (click)="email()"></ion-icon><p> Mandar correo</p> -->
+>>>>>>> 1f40bba9bfb4e22f3c49da2e961d2c23be2201a3
 </ion-content>

@@ -17,7 +17,7 @@
 
 
 <ion-content padding>
-  <button  ion-button block (click)="formulariomodal()">Agregar Adopcion</button>
+  <button  ion-button block (click)="formulariomodal()">Agregar Adopción</button>
 
 
   <ion-list>
@@ -25,7 +25,7 @@
       <ion-thumbnail item-start>
         <img [src]="adopcion.img">
       </ion-thumbnail>
-      <h2>{{adopcion.raza}}</h2>
+      <h2>{{adopcion.nombre}}</h2>
       <p>{{adopcion.descripcion}}</p>
       <button ion-button clear item-end (click)="detallemodal(adopcion)">Ver</button>
     </ion-item>
