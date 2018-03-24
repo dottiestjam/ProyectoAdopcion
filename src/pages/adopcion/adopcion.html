@@ -19,11 +19,23 @@
 <ion-content padding>
   <button  ion-button block (click)="formulariomodal()">Agregar Adopcion</button>
 
-  <ion-item-group>
+
+  <ion-list>
+    <ion-item *ngFor='let adopcion of adopciones'>
+      <ion-thumbnail item-start>
+        <img [src]="adopcion.img">
+      </ion-thumbnail>
+      <h2>{{adopcion.raza}}</h2>
+      <p>{{adopcion.descripcion}}</p>
+      <button ion-button clear item-end (click)="detallemodal(adopcion)">Ver</button>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-item-group>
     <button ion-item *ngFor='let adopcion of adopciones' text-wrap (click)="detallemodal(adopcion)">
       <h2>{{adopcion.raza}}</h2>
       <p>{{adopcion.descripcion}}</p>
     </button>
-  </ion-item-group>
+  </ion-item-group> -->
 
 </ion-content>
