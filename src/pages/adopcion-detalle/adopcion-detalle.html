@@ -40,13 +40,13 @@
               </button>
             </ion-col>
             <ion-col text-center>
-              <button ion-button clear small icon-start >
+              <button ion-button clear small icon-start (click)="enviarEmail(adopcion.correo,adopcion.nombre)">
                 <ion-icon name='mail'></ion-icon>
                 Correo
               </button>
             </ion-col>
             <ion-col text-right>
-              <button ion-button clear small icon-start (click)="enviarEmail(adopcion.correo,adopcion.nombre)">
+              <button ion-button clear small icon-start>
                 <ion-icon name='share-alt'></ion-icon>
                 Compartir
               </button>
