@@ -31,12 +31,12 @@
       </div>
       <div class="item item-button-right">
           Llamar a contacto
-          <button class="button button-positive" (click)="llamada()">
+          <button class="button button-positive" (click)="llamada(adopcion.telefono)">
               <ion-icon name="call"></ion-icon>
           </button>
         </div>
         <div class="item item-button-right">
-            <button class="button button-positive" (click)="email()">
+            <button class="button button-positive" (click)="enviarEmail(adopcion.correo,adopcion.nombre)">
                 <ion-icon name="mail"></ion-icon>
               </button>
         </div>
